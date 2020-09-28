@@ -1,0 +1,6 @@
+insert into `users` (`user_id`,  `user_email`, `first_name`, `last_name`, `password`, `user_type`, `gender`) values (null,  'admin@admin.com', 'Admin', 'AdminAct', 'ADMIN', 1, 'Male');
+insert into `users` (`user_id`, `user_email`, `first_name`, `last_name`, `password`, `user_type`, `gender`) values (null,  'ahumfrey1@reddit.com', 'Afton', 'Humfrey', 'BFdfzJoY3', 2, 'Male');
+insert into `users` (`user_id`,  `user_email`, `first_name`, `last_name`, `password`, `user_type`, `gender`) values (null,   'lpaslow2@t.co', 'Leo', 'Paslow', 'opOsGkUo97', 3, 'Male');
+insert into `users` (`user_id`,  `user_email`, `first_name`, `last_name`, `password`, `user_type`, `gender`) values (null,   'ecutten9@dropbox.com', 'Ernaline', 'Cutten', '7pIZD0bpBK8z', 2, 'Female');
+insert into `users` (`user_id`, `user_email`, `first_name`, `last_name`, `password`, `user_type`, `gender`) values (null, 'nwoloschinski4@independent.co.uk', 'Nadia', 'Woloschinski', 'oqzfqR3UK0X', 2, 'Female');
+insert into `users` (`user_id`, `user_email`, `first_name`, `last_name`, `password`, `user_type`, `gender`) values (null,  'mgabits5@usgs.gov', 'Marisa', 'Gabits', 'fq1DvFFfa4Me', 3, 'Female');
