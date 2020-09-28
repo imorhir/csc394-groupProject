@@ -51,8 +51,5 @@ public class User implements Serializable {
     @Column(name = "password")
     private String password;
     }
-    // address
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "address_id")
-//    private Address address;
+
 
