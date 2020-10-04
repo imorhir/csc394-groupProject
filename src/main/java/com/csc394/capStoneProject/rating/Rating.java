@@ -15,7 +15,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import lombok.Data;
 
 @Entity
-@Table(name = "users")
+@Table(name = "ratings")
 @Data
 public class Rating implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -28,7 +28,7 @@ public class Rating implements Serializable {
 
     // rate value
     @Column(name = "rate_val")
-    private short rateVal;
+    private Short rateVal;
 
     // message
     @Column(name = "message")

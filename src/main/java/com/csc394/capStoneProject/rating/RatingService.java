@@ -1,7 +1,6 @@
 package com.csc394.capStoneProject.rating;
 
-import com.csc394.capStoneProject.user.TypeOfUser;
-import com.csc394.capStoneProject.user.User;
+import com.csc394.capStoneProject.rating.Rating;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
