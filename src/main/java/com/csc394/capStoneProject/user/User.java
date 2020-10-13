@@ -50,6 +50,26 @@ public class User implements Serializable {
     // password
     @Column(name = "password")
     private String password;
+
+    // get first name
+    public String getFirstName() {
+        return this.firstName;
     }
+
+    // get last name
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    // get email
+    public String getEmail() {
+        return this.email;
+    }
+
+    // get password
+    public String getPassword() {
+        return this.password;
+    }
+}
 
 

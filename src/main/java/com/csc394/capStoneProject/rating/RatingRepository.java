@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface RatingRepository extends JpaRepository<Rating, Long>{
-    Rating findByRaterAndTime(Long raterId, Date timestamp);
+    List<Rating> findByRater(Long raterId);
 
     List<Rating> findByRatee(Long rateeId);
 }

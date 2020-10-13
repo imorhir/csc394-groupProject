@@ -41,8 +41,4 @@ public class Rating implements Serializable {
     // ratee id
     @Column(name = "ratee_id")
     private Long rateeId;
-
-    // timestamp
-    @Column(name = "timestamp")
-    private Date timestamp;
 }
