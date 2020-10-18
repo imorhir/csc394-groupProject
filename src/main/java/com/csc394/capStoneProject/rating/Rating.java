@@ -41,4 +41,14 @@ public class Rating implements Serializable {
     // ratee id
     @Column(name = "ratee_id")
     private Long rateeId;
+
+    // set rate_val
+    public void setRateVal (short rateVal) {
+        this.rateVal = rateVal;
+    }
+
+    // set message
+    public void setMessage (String message) {
+        this.message = message;
+    }
 }
