@@ -33,4 +33,13 @@ public class Team implements Serializable {
     // professor id
     @Column(name = "faculty_id")
     private Long facultyId;
+
+    // team name
+    @Column(name = "team_name")
+    private String teamName;
+
+    // set name
+    public void setName (String name) {
+        this.teamName = name;
+    }
 }
