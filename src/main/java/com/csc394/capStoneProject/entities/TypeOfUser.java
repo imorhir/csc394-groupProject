@@ -1,7 +1,6 @@
-package com.csc394.capStoneProject.user;
+package com.csc394.capStoneProject.models;
 
 public enum TypeOfUser {
-    USER,
     ADMIN,
     STUDENT,
     PROFESSOR
