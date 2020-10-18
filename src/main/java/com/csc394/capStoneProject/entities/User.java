@@ -1,11 +1,8 @@
-package com.csc394.capStoneProject.models;
+package com.csc394.capStoneProject.entities;
 
 import java.io.Serializable;
 
 import javax.persistence.*;
-
-import com.csc394.capStoneProject.models.Roles;
-import com.csc394.capStoneProject.models.Teams;
 
 
 import lombok.Data;
@@ -44,7 +41,7 @@ public class User implements Serializable {
     private String password;
     // teamId
     @Column(name = "team_id")
-    private Integer teamId;
+    private Long teamId;
 
     @ManyToOne()
     @JoinColumn(name="team_id", referencedColumnName = "team_id" , insertable = false, updatable = false)

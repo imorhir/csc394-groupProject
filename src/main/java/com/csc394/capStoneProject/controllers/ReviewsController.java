@@ -1,4 +1,4 @@
-package com.csc394.capStoneProject.reviews;
+package com.csc394.capStoneProject.controllers;
 
 import org.springframework.stereotype.Controller;
 

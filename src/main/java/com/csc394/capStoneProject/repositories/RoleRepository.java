@@ -1,6 +1,6 @@
-package com.csc394.capStoneProject.roles;
+package com.csc394.capStoneProject.repositories;
 
-import com.csc394.capStoneProject.models.Roles;
+import com.csc394.capStoneProject.entities.Roles;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

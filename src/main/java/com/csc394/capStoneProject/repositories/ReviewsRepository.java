@@ -1,6 +1,6 @@
-package com.csc394.capStoneProject.reviews;
+package com.csc394.capStoneProject.repositories;
 
-import com.csc394.capStoneProject.models.Reviews;
+import com.csc394.capStoneProject.entities.Reviews;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

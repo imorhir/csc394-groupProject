@@ -1,21 +1,34 @@
-package com.csc394.capStoneProject.user;
+package com.csc394.capStoneProject.controllers;
 
 
-import org.apache.tomcat.jni.Address;
+import com.csc394.capStoneProject.dto.UserDTO;
+import com.csc394.capStoneProject.entities.User;
+import com.csc394.capStoneProject.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
 @Controller
+@RequestMapping("/api/user")
 public class UserController {
 
-//    @Autowired
-//    UserService userService;
-//
-//    // login
+    @Autowired
+    UserService userService;
+
+
+
+   @GetMapping("/teams/{id}")
+   public ResponseEntity<List<UserDTO>> listStudentsInTeam(@PathVariable(name = "id") Long teamId){
+
+       return  ResponseEntity.ok().body(UserDTO.listEntityToDTO(userService.getUserStudentsByTeamId(teamId)));
+   }
+
+    // login
 //    @GetMapping({"/", "/login"})
 //    public String login(Model model) {
 //        model.addAttribute("user", new User());

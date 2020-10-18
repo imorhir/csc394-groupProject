@@ -1,4 +1,4 @@
-package com.csc394.capStoneProject.reviews;
+package com.csc394.capStoneProject.services;
 
 import org.springframework.stereotype.Service;
 

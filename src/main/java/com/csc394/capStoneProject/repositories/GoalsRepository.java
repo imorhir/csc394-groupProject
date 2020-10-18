@@ -1,4 +1,4 @@
-package com.csc394.capStoneProject.goals;
+package com.csc394.capStoneProject.repositories;
 
 import org.springframework.stereotype.Repository;
 

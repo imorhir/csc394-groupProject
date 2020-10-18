@@ -1,4 +1,4 @@
-package com.csc394.capStoneProject.goals;
+package com.csc394.capStoneProject.services;
 
 import org.springframework.stereotype.Service;
 

@@ -1,5 +1,8 @@
-package com.csc394.capStoneProject.user;
+package com.csc394.capStoneProject.services;
 
+import com.csc394.capStoneProject.entities.User;
+import com.csc394.capStoneProject.repositories.TeamsRepository;
+import com.csc394.capStoneProject.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,8 +11,19 @@ import java.util.List;
 
 @Service
 public class UserService {
-//    @Autowired
-//    UserRepository userRepository;
+
+    @Autowired
+    UserRepository userRepository;
+    @Autowired
+    TeamsRepository teamsRepository;
+
+
+    public List<User> getUserStudentsByTeamId(Long teamId){
+
+        return userRepository.findByTeamId(teamId);
+
+
+    }
 //
 //    //
 //
@@ -21,6 +35,7 @@ public class UserService {
 //        userRepository.findAll().forEach(e -> users.add(e));
 //        return users;
 //    }
+    // getAll Users
 //
 //    // get one user (by id)
 ////  public User getUser(Long id) {

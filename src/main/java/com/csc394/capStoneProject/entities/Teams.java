@@ -1,4 +1,4 @@
-package com.csc394.capStoneProject.models;
+package com.csc394.capStoneProject.entities;
 
 import lombok.Data;
 
