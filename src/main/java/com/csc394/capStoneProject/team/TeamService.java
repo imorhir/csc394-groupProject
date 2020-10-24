@@ -1,8 +1,5 @@
 package com.csc394.capStoneProject.team;
 
-import com.csc394.capStoneProject.rating.Rating;
-import com.csc394.capStoneProject.rating.RatingRepository;
-import com.csc394.capStoneProject.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
