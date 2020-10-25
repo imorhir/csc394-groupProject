@@ -1,5 +1,7 @@
 package com.csc394.capStoneProject.services;
 
+import com.csc394.capStoneProject.dto.AssignStdToTeamDTO;
+import com.csc394.capStoneProject.entities.Teams;
 import com.csc394.capStoneProject.entities.User;
 import com.csc394.capStoneProject.repositories.TeamsRepository;
 import com.csc394.capStoneProject.repositories.UserRepository;
@@ -24,6 +26,23 @@ public class UserService {
 
 
     }
+
+    public User addUser( User user) {
+
+
+        return  userRepository.save(user);
+
+    }
+
+    public void  addUserToTeam(AssignStdToTeamDTO assignStdToTeamDTO){
+        assignStdToTeamDTO.getListUserId().forEach(userId->{
+            User user = userRepository.findById(userId).get();
+            user.setTeamId(assignStdToTeamDTO.getTeamId());
+            userRepository.save(user);
+        });
+    }
+
+
 //
 //    //
 //
@@ -48,11 +67,12 @@ public class UserService {
 ////    }
 //
 ////    // save user
-////    public User saveUser(User user) {
-////        if(user.getUserType().toString().isEmpty())
-////            user.setUserType(TypeOfUser.USER);
-////        return userRepository.save(user);
-////    }
+//    public User saveUser(User user) {
+//         user.getRole().toString().isEmpty();
+//        if(user.getUserType().toString().isEmpty())
+//            user.setUserType(TypeOfUser.USER);
+//        return userRepository.save(user);
+//    }
 //
 ////    public User updateUser(Long userID, User user) {
 ////        user.setId(userID);

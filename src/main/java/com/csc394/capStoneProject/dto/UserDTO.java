@@ -12,11 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-
 public class UserDTO {
 
     private Long id;
-
+    private String userEmail;
 
     private String firstName;
 
@@ -24,7 +23,7 @@ public class UserDTO {
     private String lastName;
 
 
-    private Integer roleId;
+    private Long roleId;
 
 
     private String userName;
@@ -38,8 +37,9 @@ public class UserDTO {
     public static UserDTO entityToDTO(User userEntity){
         UserDTO userDTO = new UserDTO();
         if(userEntity!=null) {
-            userDTO.setId(userDTO.getId());
+            userDTO.setId(userEntity.getId());
             userDTO.setFirstName(userEntity.getFirstName());
+            userDTO.setUserEmail(userEntity.getUserEmail());
             userDTO.setLastName(userEntity.getLastName());
             userDTO.setUserName(userEntity.getUserName());
             userDTO.setPassword(userEntity.getPassword());
@@ -48,10 +48,31 @@ public class UserDTO {
         }
         return userDTO;
     }
+    public static User dtoToEntity(UserDTO userdto){
+        User userEntity = new User();
+
+        if(userdto!=null) {
+            userEntity.setId(userdto.getId());
+            userEntity.setFirstName(userdto.getFirstName());
+            userEntity.setFirstName(userdto.getUserEmail());
+            userEntity.setLastName(userdto.getLastName());
+            userEntity.setUserName(userdto.getUserName());
+            userEntity.setPassword(userdto.getPassword());
+            userEntity.setTeamId(userdto.getTeamId());
+            userEntity.setRoleId(userdto.getRoleId());
+        }
+        return userEntity;
+    }
 
     public static List<UserDTO> listEntityToDTO(List<User> userEntity){
         List<UserDTO> userDTO = new ArrayList<>();
         userEntity.forEach(i-> userDTO.add(entityToDTO(i)));
         return userDTO;
+    }
+
+    public static List<User> listDTOToEntity(List<UserDTO> userdto){
+        List<User> userEntity = new ArrayList<>();
+        userdto.forEach(i-> userEntity.add(dtoToEntity(i)));
+        return userEntity;
     }
 }

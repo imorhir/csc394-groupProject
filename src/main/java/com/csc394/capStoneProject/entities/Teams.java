@@ -29,10 +29,10 @@ public class Teams implements Serializable {
 
 
 
-    @OneToMany(targetEntity=Goals.class, mappedBy="teams")
+    @OneToMany(cascade = CascadeType.ALL, targetEntity=Goals.class, mappedBy="teams")
     private List<Goals> goals = new ArrayList<>();
 
-    @OneToMany(targetEntity=Reviews.class, mappedBy="teams")
+    @OneToMany(cascade = CascadeType.ALL, targetEntity=Reviews.class, mappedBy="teams")
     private List<Reviews> reviews = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.ALL)
