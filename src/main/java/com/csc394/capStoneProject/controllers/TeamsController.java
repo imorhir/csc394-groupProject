@@ -30,7 +30,7 @@ public class TeamsController {
      }
 //
      @GetMapping("/professors/{id}")
-    public ResponseEntity<List<TeamsDTO>> getTeamsByProffesor(@PathVariable(name ="id") Long professorId){
+    public ResponseEntity<List<TeamsDTO>> getTeamsByProfessor(@PathVariable(name ="id") Long professorId){
 
          return ResponseEntity.ok()
                  .body(TeamsDTO.listEntityToDTO(teamsService.findAllTeamByProfessorId(professorId)));
