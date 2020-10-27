@@ -25,9 +25,21 @@ public class Teams implements Serializable {
     @Column(name="team_name")
     private String teamName;
 
+    public Long getId () {
+        return this.id;
+    }
 
+    public Integer getUserId () {
+        return this.userId;
+    }
 
+    public String getTeamName () {
+        return this.teamName;
+    }
 
+    public void setTeamName (String name) {
+        this.teamName = name;
+    }
 
     @OneToMany(cascade = CascadeType.ALL, targetEntity=Goals.class, mappedBy="teams")
     private List<Goals> goals = new ArrayList<>();

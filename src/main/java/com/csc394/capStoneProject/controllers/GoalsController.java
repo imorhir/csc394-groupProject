@@ -22,7 +22,6 @@ GoalsServices goalsServices;
 
     @GetMapping("/teamGoal/{id}")
     public ResponseEntity <List<GoalsDTO>> getGoalByTeamId(@PathVariable(name ="id") Long teamId ){
-
         return ResponseEntity.ok()
                 .body(GoalsDTO.listEntityToDTO(goalsServices.findGoalByTeamId(teamId)));
     }

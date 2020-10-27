@@ -25,6 +25,18 @@ public class TeamsDTO {
 
     private Integer numberOfMenbers;
 
+    public void setId (Long id) {
+        this.id = id;
+    }
+
+    public void setUserId (Integer id) {
+        this.userId = id;
+    }
+
+    public void setTeamName (String name) {
+        this.teamName = name;
+    }
+
     public static TeamsDTO entityToDTO(Teams teamsEntity){
 
         TeamsDTO teamsDTO = new TeamsDTO();
