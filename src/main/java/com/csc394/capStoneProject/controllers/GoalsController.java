@@ -30,7 +30,6 @@ GoalsServices goalsServices;
 
 
     @RequestMapping(value="/grade", method = RequestMethod.PUT)
-
     public ResponseEntity<GoalsDTO> setGrade(@Valid @RequestBody Goals goals) {
         return ResponseEntity.ok().body(GoalsDTO.entityToDTO(goalsServices.grading(goals.getId(), goals.getGrades())));
     }
