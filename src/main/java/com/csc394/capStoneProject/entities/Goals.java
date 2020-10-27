@@ -28,6 +28,16 @@ public class Goals implements Serializable {
     @JoinColumn(name="team_id", referencedColumnName = "team_id",  insertable = false, updatable = false)
     private Teams teams;
 
+    public Integer getGrades () {
+        return this.grades;
+    }
 
+    public Long getId () {
+        return this.id;
+    }
+
+    public void setGrades (Integer grades) {
+        this.grades = grades;
+    }
 
 }

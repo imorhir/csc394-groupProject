@@ -48,9 +48,26 @@ public class User implements Serializable {
     @ManyToOne()
     @JoinColumn(name="team_id", referencedColumnName = "team_id" , insertable = false, updatable = false)
     private Teams teams;
+
     @ManyToOne()
     @JoinColumn(name="role_id", referencedColumnName = "role_id" , insertable = false, updatable = false)
     private Roles role;
+
+    public String getUserName () {
+        return this.userName;
     }
+
+    public String getPassword () {
+        return this.password;
+    }
+
+    public Roles getRole () {
+        return this.role;
+    }
+
+    public void setTeamId (Long teamId) {
+        this.teamId = teamId;
+    }
+}
 
 

@@ -9,6 +9,14 @@ public class AssignStdToTeamDTO {
     private Long teamId;
     private List<Long> listUserId;
 
+    public Long getTeamId () {
+        return this.teamId;
+    }
+
+    public List<Long> getListUserId () {
+        return this.listUserId;
+    }
+
 
 
 

@@ -34,4 +34,8 @@ public class Roles implements Serializable {
     @OneToMany(targetEntity= User.class, mappedBy="role")
     private List<User> goals = new ArrayList<>();
 
+    public String getRoleName () {
+        return this.roleName;
+    }
+
 }
