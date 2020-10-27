@@ -29,8 +29,10 @@ public class User implements Serializable {
 
     // roleType
     @Column(name = "role_id")
-    private Integer roleId;
+    private Long roleId;
 
+    @Column(name = "user_email")
+    private String userEmail;
 
     // userName
     @Column(name= "user_name")

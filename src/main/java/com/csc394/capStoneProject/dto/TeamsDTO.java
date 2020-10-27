@@ -23,6 +23,8 @@ public class TeamsDTO {
 
     private String teamName;
 
+    private Integer numberOfMenbers;
+
     public static TeamsDTO entityToDTO(Teams teamsEntity){
 
         TeamsDTO teamsDTO = new TeamsDTO();
