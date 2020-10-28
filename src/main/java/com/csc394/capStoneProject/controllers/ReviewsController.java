@@ -13,39 +13,39 @@ import com.csc394.capStoneProject.entities.Reviews;
 import java.util.List;
 
 @Controller
-@RequestMapping("/api/reviews")
+//@RequestMapping("/api/reviews")
 public class ReviewsController {
 
-    @Autowired
-    ReviewsServices reviewsService;
+//    @Autowired
+//    ReviewsServices reviewsService;
+//
+//    private final ReviewsRepository reviewsRepo;
 
-    private final ReviewsRepository reviewsRepo;
+ //   ReviewsController(ReviewsRepository reviewsRepo) {
+//        this.reviewsRepo = reviewsRepo;
+//    }
 
-    ReviewsController(ReviewsRepository reviewsRepo) {
-        this.reviewsRepo = reviewsRepo;
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Reviews> getReviews(@PathVariable(name = "id") Long reviewId) {
-        Reviews reviews = reviewsService.findById(reviewId);
-        return ResponseEntity.ok().body(reviews);
-    }
+//    @GetMapping("/{id}")
+//    public ResponseEntity<Reviews> getReviews(@PathVariable(name = "id") Long reviewId) {
+//        Reviews reviews = reviewsService.findById(reviewId);
+//        return ResponseEntity.ok().body(reviews);
+//    }
 
     // get all reviews
-    @GetMapping("/all")
-    List<Reviews> all() {
-        return reviewsRepo.findAll();
-    }
+//    @GetMapping("/all")
+//    List<Reviews> all() {
+//        return reviewsRepo.findAll();
+//    }
 
     // add new review
-    @PostMapping("/addReview")
-    Reviews newReview(@RequestBody Reviews newReview) {
-        return reviewsRepo.save(newReview);
-    }
+//    @PostMapping("/addReview")
+//    Reviews newReview(@RequestBody Reviews newReview) {
+ //       return reviewsRepo.save(newReview);
+ //   }
 
     // delete review
-    @DeleteMapping("/reviews/{id}")
-    void deleteReview(@PathVariable Long id) {
-        reviewsRepo.deleteById(id);
-    }
+//    @DeleteMapping("/reviews/{id}")
+//    void deleteReview(@PathVariable Long id) {
+//        reviewsRepo.deleteById(id);
+//    }
 }

@@ -31,24 +31,24 @@ public class Reviews implements Serializable {
     @JoinColumn(name="team_id", referencedColumnName = "team_id" , insertable = false, updatable = false)
     private Teams teams;
 
-    @Column(name = "message")
-    private String message;
+//    @Column(name = "message")
+//    private String message;
 
-    @Column(name = "reviewer_id")
-    private Long reviewerId;
+//    @Column(name = "reviewer_id")
+//    private Long reviewerId;
+//
+//    @Column(name = "reviewee_id")
+//    private Long revieweeId;
 
-    @Column(name = "reviewee_id")
-    private Long revieweeId;
-
-    // set rate_val
-    public void setRating (Integer rateVal) {
-        this.rating = rateVal;
-    }
-
-    // set message
-    public void setMessage (String message) {
-        this.message = message;
-    }
+//    // set rate_val
+//    public void setRating (Integer rateVal) {
+//        this.rating = rateVal;
+//    }
+//
+//    // set message
+//    public void setMessage (String message) {
+//        this.message = message;
+//    }
 
 
 
