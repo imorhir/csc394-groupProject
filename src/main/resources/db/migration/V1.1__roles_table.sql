@@ -1,0 +1,8 @@
+-- CREATE TABLE `roles` (
+-- -- 	`role_id` BIGINT AUTO_INCREMENT,
+-- --
+-- -- 	`role_name` VARCHAR(255),
+-- -- 	`role_code` VARCHAR (255),
+-- -- 	 PRIMARY KEY (`role_id`)
+-- --
+-- -- );
