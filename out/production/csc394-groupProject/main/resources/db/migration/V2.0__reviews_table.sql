@@ -1,0 +1,9 @@
+-- CREATE TABLE `reviews` (
+-- 	`review_id` BIGINT AUTO_INCREMENT,
+--
+-- 	`team_id` INTEGER FOREIGN KEY REFERENCES teams(`team_id`),
+-- 	`user_id` INTEGER foreign key references users(`user_id`),
+-- 	PRIMARY KEY (`review_id`),
+-- 	`rating` INTEGER
+-- -- 	 CONSTRAINT address_fk FOREIGN KEY(`address_id`) REFERENCES addresses(`address_id`)
+-- );
