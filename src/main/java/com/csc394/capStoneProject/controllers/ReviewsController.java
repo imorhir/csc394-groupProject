@@ -55,10 +55,9 @@ public class ReviewsController {
     }
 
     // delete review
-    @RequestMapping(value="/deleteReview/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Void> deleteReview (
-            @Valid @RequestBody ReviewsDTO reviewsDto, @PathVariable(name = "id") Long reviewId) {
-        reviewsService.deleteReview(reviewsService.findById(reviewId));
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> deleteReview (@PathVariable Long id) {
+        reviewsService.deleteReview(reviewsService.findById(id));
         return ResponseEntity.noContent().build();
     }
 
