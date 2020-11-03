@@ -21,26 +21,26 @@ public class ReviewsDTO {
 //    private String message;
 //    private Long reviewerId;
 //    private Long revieweeId;
-
-    public void setId (Long id) {
-        this.id = id;
-    }
-
-    public void setTeamId (Integer teamId) {
-        this.teamId = teamId;
-    }
-
-    public void setUserId (Integer userId) {
-        this.userId = userId;
-    }
-
-    public void setRating (Integer rating) {
-        this.rating = rating;
-    }
-
-    public void setTeams (Teams team) {
-        this.teams = team;
-    }
+//
+//    public void setId (Long id) {
+//        this.id = id;
+//    }
+//
+//    public void setTeamId (Integer teamId) {
+//        this.teamId = teamId;
+//    }
+//
+//    public void setUserId (Integer userId) {
+//        this.userId = userId;
+//    }
+//
+//    public void setRating (Integer rating) {
+//        this.rating = rating;
+//    }
+//
+//    public void setTeams (Teams team) {
+//        this.teams = team;
+//    }
 
 //    public void setMessage (String message) {
 //        this.message = message;
@@ -59,27 +59,27 @@ public class ReviewsDTO {
         ReviewsDTO reviewsDTO = new ReviewsDTO();
         if(reviewsEntity != null){
             reviewsDTO.setId(reviewsEntity.getId());
-//            reviewsDTO.setTeamId(reviewsEntity.getTeamId());
+            reviewsDTO.setTeamId(reviewsEntity.getTeamId());
             reviewsDTO.setUserId(reviewsEntity.getUserId());
             reviewsDTO.setRating(reviewsEntity.getRating());
-            reviewsDTO.setTeams(reviewsEntity.getTeam());
+//            reviewsDTO.setTeams(reviewsEntity.getTeams());
         }
 
         return reviewsDTO;
     }
-
-    public static Reviews dtoToEntity(ReviewsDTO reviewsDto){
-        Reviews reviewsEntity = new Reviews();
-
-        if(reviewsDto!=null) {
-            reviewsEntity.setId(reviewsDto.getId());
-//            reviewsEntity.setTeamId(reviewsDto.getTeamId());
-            reviewsEntity.setUserId(reviewsDto.getUserId());
-            reviewsEntity.setRating(reviewsDto.getRating());
-            reviewsEntity.setTeams(reviewsDto.getTeams());
-        }
-        return reviewsEntity;
-    }
+//
+//    public static Reviews dtoToEntity(ReviewsDTO reviewsDto){
+//        Reviews reviewsEntity = new Reviews();
+//
+//        if(reviewsDto!=null) {
+//            reviewsEntity.setId(reviewsDto.getId());
+////            reviewsEntity.setTeamId(reviewsDto.getTeamId());
+//            reviewsEntity.setUserId(reviewsDto.getUserId());
+//            reviewsEntity.setRating(reviewsDto.getRating());
+//            reviewsEntity.setTeams(reviewsDto.getTeams());
+//        }
+//        return reviewsEntity;
+//    }
 
     public static List<ReviewsDTO> listEntityToDTO(List<Reviews> reviewsEntity){
         List<ReviewsDTO> reviewsDTO = new ArrayList<>();
@@ -87,29 +87,29 @@ public class ReviewsDTO {
         return reviewsDTO;
     }
 
-    public static List<Reviews> listDTOToEntity(List<ReviewsDTO> reviewsDto){
-        List<Reviews> reviewsEntity = new ArrayList<>();
-        reviewsDto.forEach(i-> reviewsEntity.add(dtoToEntity(i)));
-        return reviewsEntity;
-    }
+//    public static List<Reviews> listDTOToEntity(List<ReviewsDTO> reviewsDto){
+//        List<Reviews> reviewsEntity = new ArrayList<>();
+//        reviewsDto.forEach(i-> reviewsEntity.add(dtoToEntity(i)));
+//        return reviewsEntity;
+//    }
 
-    public Long getId() {
-        return id;
-    }
-
-    public Integer getTeamId() {
-        return teamId;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public Integer getRating() {
-        return rating;
-    }
-
-    public Teams getTeams() {
-        return teams;
-    }
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public Integer getTeamId() {
+//        return teamId;
+//    }
+//
+//    public Integer getUserId() {
+//        return userId;
+//    }
+//
+//    public Integer getRating() {
+//        return rating;
+//    }
+//
+//    public Teams getTeams() {
+//        return teams;
+//    }
 }

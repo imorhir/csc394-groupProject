@@ -48,11 +48,11 @@ public class ReviewsController {
     }
 
     // add new review
-    @RequestMapping(value="/addReview", method = RequestMethod.POST )
-    public ResponseEntity<ReviewsDTO> addReview(
-            @Valid @RequestBody ReviewsDTO reviewsDto) {
-        return ResponseEntity.ok().body(ReviewsDTO.entityToDTO(reviewsService.saveReview(ReviewsDTO.dtoToEntity(reviewsDto))));
-    }
+//    @RequestMapping(value="/addReview", method = RequestMethod.POST )
+//    public ResponseEntity<ReviewsDTO> addReview(
+//            @Valid @RequestBody ReviewsDTO reviewsDto) {
+//        return ResponseEntity.ok().body(ReviewsDTO.entityToDTO(reviewsService.saveReview(ReviewsDTO.dtoToEntity(reviewsDto))));
+//    }
 
     // delete review
     @DeleteMapping("/delete/{id}")

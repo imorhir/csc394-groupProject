@@ -24,28 +24,28 @@ public class Teams implements Serializable {
     // team_name
     @Column(name="team_name")
     private String teamName;
-
-    public Long getId () {
-        return this.id;
-    }
-
-    public Integer getUserId () {
-        return this.userId;
-    }
-
-    public String getTeamName () {
-        return this.teamName;
-    }
-
-    public void setTeamName (String name) {
-        this.teamName = name;
-    }
+//
+//    public Long getId () {
+//        return this.id;
+//    }
+//
+//    public Integer getUserId () {
+//        return this.userId;
+//    }
+//
+//    public String getTeamName () {
+//        return this.teamName;
+//    }
+//
+//    public void setTeamName (String name) {
+//        this.teamName = name;
+//    }
 
     @OneToMany(cascade = CascadeType.ALL, targetEntity=Goals.class, mappedBy="teams")
     private List<Goals> goals = new ArrayList<>();
 
-    @OneToMany(cascade = CascadeType.ALL, targetEntity=Reviews.class, mappedBy="teams")
-    private List<Reviews> reviews = new ArrayList<>();
+//    @OneToMany(cascade = CascadeType.ALL, targetEntity=Reviews.class, mappedBy="teams")
+//    private List<Reviews> reviews = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "user_id", insertable = false, updatable = false)

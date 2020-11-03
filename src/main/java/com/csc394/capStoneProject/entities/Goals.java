@@ -25,19 +25,19 @@ public class Goals implements Serializable {
 
 //
     @ManyToOne()
-    @JoinColumn(name="team_id", referencedColumnName = "team_id",  insertable = false, updatable = false)
+    @JoinColumn(name="team_id", referencedColumnName = "team_id")
     private Teams teams;
 
-    public Integer getGrades () {
-        return this.grades;
-    }
-
-    public Long getId () {
-        return this.id;
-    }
-
-    public void setGrades (Integer grades) {
-        this.grades = grades;
-    }
+//    public Integer getGrades () {
+//        return this.grades;
+//    }
+//
+//    public Long getId () {
+//        return this.id;
+//    }
+//
+//    public void setGrades (Integer grades) {
+//        this.grades = grades;
+//    }
 
 }

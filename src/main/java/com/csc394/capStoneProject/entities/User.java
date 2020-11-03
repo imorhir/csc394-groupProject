@@ -27,7 +27,7 @@ public class User implements Serializable {
     @Column(name = "last_name")
     private String lastName;
 
-    // roleType
+//     roleType
     @Column(name = "role_id")
     private Long roleId;
 
@@ -46,7 +46,7 @@ public class User implements Serializable {
     private Long teamId;
 
     @ManyToOne()
-    @JoinColumn(name="team_id", referencedColumnName = "team_id" , insertable = false, updatable = false)
+    @JoinColumn(name="team_id", referencedColumnName = "team_id", insertable = false, updatable = false )
     private Teams teams;
 
     @ManyToOne()
