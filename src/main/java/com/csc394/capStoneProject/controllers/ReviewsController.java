@@ -18,7 +18,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
-//@RequestMapping("/api/reviews")
+@RequestMapping("/api/reviews")
 public class ReviewsController {
 
     @Autowired
@@ -37,10 +37,10 @@ public class ReviewsController {
         return  ResponseEntity.ok().body(ReviewsDTO.listEntityToDTO(reviewsService.getAllReviews()));
     }
 
-    @GetMapping("/teams/{id}")
-    public ResponseEntity<List<ReviewsDTO>> listReviewsByTeam(@PathVariable(name = "id") Integer teamId){
-        return  ResponseEntity.ok().body(ReviewsDTO.listEntityToDTO(reviewsService.getReviewsByTeamId(teamId)));
-    }
+//    @GetMapping("/teams/{id}")
+//    public ResponseEntity<List<ReviewsDTO>> listReviewsByTeam(@PathVariable(name = "id") Integer teamId){
+//        return  ResponseEntity.ok().body(ReviewsDTO.listEntityToDTO(reviewsService.getReviewsByTeamId(teamId)));
+//    }
 
     @GetMapping("/users/{id}")
     public ResponseEntity<List<ReviewsDTO>> listReviewsByUser(@PathVariable(name = "id") Integer userId){

@@ -9,11 +9,11 @@ import java.util.List;
 @Repository
 public interface ReviewsRepository extends JpaRepository<Reviews, Long> {
 
-    List<Reviews> findByReviewerId(Long reviewerId);
+//    List<Reviews> findByReviewerId(Long reviewerId);
+//
+//    List<Reviews> findByRevieweeId(Long revieweeId);
 
-    List<Reviews> findByRevieweeId(Long revieweeId);
-
-    List<Reviews> findByTeamId (Integer teamId);
+//    List<Reviews> findByTeamId (Integer teamId);
 
     List<Reviews> findByUserId (Integer userId);
 }

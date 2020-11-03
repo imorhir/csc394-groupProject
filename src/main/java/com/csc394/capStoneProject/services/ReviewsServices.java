@@ -36,26 +36,26 @@ public class ReviewsServices {
         return reviews;
     }
 
-    // get review by teamId
-    public List<Reviews> getReviewsByTeamId(Integer teamId) {
-        List<Reviews> reviews = new ArrayList<Reviews>();
-        reviewsRepository.findByTeamId(teamId).forEach(e -> reviews.add(e));
-        return reviews;
-    }
+//    // get review by teamId
+//    public List<Reviews> getReviewsByTeamId(Integer teamId) {
+//        List<Reviews> reviews = new ArrayList<Reviews>();
+//        reviewsRepository.findByTeamId(teamId).forEach(e -> reviews.add(e));
+//        return reviews;
+//    }
 
-    // get reviews by reviewee
-    public List<Reviews> getReviewByReviewer(Long id) {
-        List<Reviews> reviews = new ArrayList<Reviews>();
-        reviewsRepository.findByReviewerId(id).forEach(e -> reviews.add(e));
-        return reviews;
-    }
-
-    // get reviews by reviewee
-    public List<Reviews> getReviewByReviewee(Long id) {
-        List<Reviews> reviews = new ArrayList<Reviews>();
-        reviewsRepository.findByRevieweeId(id).forEach(e -> reviews.add(e));
-        return reviews;
-    }
+//    // get reviews by reviewee
+//    public List<Reviews> getReviewByReviewer(Long id) {
+//        List<Reviews> reviews = new ArrayList<Reviews>();
+//        reviewsRepository.findByReviewerId(id).forEach(e -> reviews.add(e));
+//        return reviews;
+//    }
+//
+//    // get reviews by reviewee
+//    public List<Reviews> getReviewByReviewee(Long id) {
+//        List<Reviews> reviews = new ArrayList<Reviews>();
+//        reviewsRepository.findByRevieweeId(id).forEach(e -> reviews.add(e));
+//        return reviews;
+//    }
 
     // update rate value
     public Reviews updateRateVal(Reviews reviews, Integer val) {
@@ -63,11 +63,11 @@ public class ReviewsServices {
         return reviewsRepository.save(reviews);
     }
 
-    // update message
-    public Reviews updateMessage(Reviews reviews, String message) {
-        reviews.setMessage(message);
-        return reviewsRepository.save(reviews);
-    }
+//    // update message
+//    public Reviews updateMessage(Reviews reviews, String message) {
+//        reviews.setMessage(message);
+//        return reviewsRepository.save(reviews);
+//    }
 
     // delete review
     public void deleteReview(Reviews review) {

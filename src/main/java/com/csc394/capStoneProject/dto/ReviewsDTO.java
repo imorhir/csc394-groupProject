@@ -18,9 +18,9 @@ public class ReviewsDTO {
     private Integer userId;
     private Integer rating;
     private Teams teams;
-    private String message;
-    private Long reviewerId;
-    private Long revieweeId;
+//    private String message;
+//    private Long reviewerId;
+//    private Long revieweeId;
 
     public void setId (Long id) {
         this.id = id;
@@ -42,24 +42,24 @@ public class ReviewsDTO {
         this.teams = team;
     }
 
-    public void setMessage (String message) {
-        this.message = message;
-    }
+//    public void setMessage (String message) {
+//        this.message = message;
+//    }
 
-    public void setReviewerId (Long reviewerId) {
-        this.reviewerId = reviewerId;
-    }
-
-    public void setRevieweeId (Long revieweeId) {
-        this.revieweeId = revieweeId;
-    }
+//    public void setReviewerId (Long reviewerId) {
+//        this.reviewerId = reviewerId;
+//    }
+//
+//    public void setRevieweeId (Long revieweeId) {
+//        this.revieweeId = revieweeId;
+//    }
 
     public static ReviewsDTO entityToDTO(Reviews reviewsEntity){
 
         ReviewsDTO reviewsDTO = new ReviewsDTO();
         if(reviewsEntity != null){
             reviewsDTO.setId(reviewsEntity.getId());
-            reviewsDTO.setTeamId(reviewsEntity.getTeamId());
+//            reviewsDTO.setTeamId(reviewsEntity.getTeamId());
             reviewsDTO.setUserId(reviewsEntity.getUserId());
             reviewsDTO.setRating(reviewsEntity.getRating());
             reviewsDTO.setTeams(reviewsEntity.getTeam());
@@ -73,7 +73,7 @@ public class ReviewsDTO {
 
         if(reviewsDto!=null) {
             reviewsEntity.setId(reviewsDto.getId());
-            reviewsEntity.setTeamId(reviewsDto.getTeamId());
+//            reviewsEntity.setTeamId(reviewsDto.getTeamId());
             reviewsEntity.setUserId(reviewsDto.getUserId());
             reviewsEntity.setRating(reviewsDto.getRating());
             reviewsEntity.setTeams(reviewsDto.getTeams());
@@ -91,5 +91,25 @@ public class ReviewsDTO {
         List<Reviews> reviewsEntity = new ArrayList<>();
         reviewsDto.forEach(i-> reviewsEntity.add(dtoToEntity(i)));
         return reviewsEntity;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Integer getTeamId() {
+        return teamId;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public Integer getRating() {
+        return rating;
+    }
+
+    public Teams getTeams() {
+        return teams;
     }
 }

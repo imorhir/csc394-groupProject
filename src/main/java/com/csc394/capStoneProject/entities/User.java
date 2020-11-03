@@ -53,21 +53,21 @@ public class User implements Serializable {
     @JoinColumn(name="role_id", referencedColumnName = "role_id" , insertable = false, updatable = false)
     private Roles role;
 
-    public String getUserName () {
-        return this.userName;
-    }
-
-    public String getPassword () {
-        return this.password;
-    }
-
-    public Roles getRole () {
-        return this.role;
-    }
-
-    public void setTeamId (Long teamId) {
-        this.teamId = teamId;
-    }
+//    public String getUserName () {
+//        return this.userName;
+//    }
+//
+//    public String getPassword () {
+//        return this.password;
+//    }
+//
+//    public Roles getRole () {
+//        return this.role;
+//    }
+//
+//    public void setTeamId (Long teamId) {
+//        this.teamId = teamId;
+//    }
 }
 
 
