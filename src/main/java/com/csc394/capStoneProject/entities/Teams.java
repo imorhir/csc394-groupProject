@@ -38,4 +38,7 @@ public class Teams implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "user_id", insertable = false, updatable = false)
     private User professor;
+
+    @OneToMany(cascade = CascadeType.ALL, targetEntity = User.class, mappedBy ="teams")
+    private List<User> user = new ArrayList<>();
 }

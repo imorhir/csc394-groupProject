@@ -1,6 +1,7 @@
 package com.csc394.capStoneProject.dto;
 
 import com.csc394.capStoneProject.entities.Teams;
+import com.csc394.capStoneProject.entities.User;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -24,6 +25,8 @@ public class TeamsDTO {
     private String teamName;
 
     private Integer numberOfMenbers;
+//
+
 
     public static TeamsDTO entityToDTO(Teams teamsEntity){
 
@@ -32,12 +35,16 @@ public class TeamsDTO {
             teamsDTO.setId(teamsEntity.getId());
             teamsDTO.setUserId(teamsEntity.getUserId());
             teamsDTO.setTeamName(teamsEntity.getTeamName());
+            teamsDTO.setNumberOfMenbers(teamsEntity.getUser().size());
+
+
         }
         return teamsDTO;
     }
     public static List<TeamsDTO> listEntityToDTO(List<Teams> teamsEntity){
         List<TeamsDTO> teamsDTO = new ArrayList<>();
          teamsEntity.forEach(i-> teamsDTO.add(entityToDTO(i)));
+
          return teamsDTO;
     }
 

@@ -50,6 +50,12 @@ public class UserController {
         return ResponseEntity.ok().body("ok");
     }
 
+    @RequestMapping(value = "/allStudentUsers", method = RequestMethod.GET)
+    public ResponseEntity <List<UserDTO>> getAllStudents(){
+
+       return ResponseEntity.ok().body(UserDTO.listEntityToDTO(userService.getStudentUsers()));
+    }
+
     // login
 //    @GetMapping({"/", "/login"})
 //    public String login(Model model) {

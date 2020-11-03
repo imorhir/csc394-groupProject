@@ -11,4 +11,5 @@ import java.util.List;
 public interface TeamsRepository extends JpaRepository<Teams, Long> {
     public List<Teams> findByProfessor(User professor);
 
+
 }

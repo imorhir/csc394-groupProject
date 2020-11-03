@@ -51,6 +51,8 @@ public class User implements Serializable {
     @ManyToOne()
     @JoinColumn(name="role_id", referencedColumnName = "role_id" , insertable = false, updatable = false)
     private Roles role;
+
+
     }
 
 

@@ -1,6 +1,7 @@
 package com.csc394.capStoneProject.dto;
 
 import com.csc394.capStoneProject.entities.Goals;
+import com.csc394.capStoneProject.entities.Status;
 import com.csc394.capStoneProject.entities.Teams;
 import lombok.Data;
 
@@ -19,7 +20,11 @@ public class GoalsDTO {
 
     private Long teamId;
 
+    private Status status;
+
     private Teams teams;
+
+
 
 
     public static GoalsDTO entityToDTO(Goals goalEntity){
@@ -30,6 +35,7 @@ public class GoalsDTO {
             goalsDTO.setDescription(goalEntity.getDiscription());
             goalsDTO.setGrades(goalEntity.getGrades());
            goalsDTO.setTeamId(goalEntity.getTeams().getId());
+           goalsDTO.setStatus(goalEntity.getStatus());
         }
 
         return goalsDTO;

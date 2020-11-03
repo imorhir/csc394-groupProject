@@ -1,5 +1,7 @@
 package com.csc394.capStoneProject.controllers;
 
+import com.csc394.capStoneProject.dto.AssignGoalToTeam;
+import com.csc394.capStoneProject.dto.AssignStdToTeamDTO;
 import com.csc394.capStoneProject.dto.GoalsDTO;
 import com.csc394.capStoneProject.dto.TeamsDTO;
 import com.csc394.capStoneProject.entities.Goals;
@@ -20,6 +22,8 @@ public class GoalsController {
 @Autowired
 GoalsServices goalsServices;
 
+
+
     @GetMapping("/teamGoal/{id}")
     public ResponseEntity <List<GoalsDTO>> getGoalByTeamId(@PathVariable(name ="id") Long teamId ){
 
@@ -33,5 +37,19 @@ GoalsServices goalsServices;
 
     public ResponseEntity<GoalsDTO> setGrade(@Valid @RequestBody Goals goals) {
         return ResponseEntity.ok().body(GoalsDTO.entityToDTO(goalsServices.grading(goals.getId(), goals.getGrades())));
+    }
+
+
+    @RequestMapping(value = "/faculty/addGoalsToTeam", method = RequestMethod.PUT)
+    public ResponseEntity<String> addGoalsToTeam(
+            @Valid @RequestBody AssignGoalToTeam assignGoalToTeam) {
+
+        goalsServices.addGoalsToTeam(assignGoalToTeam);
+        return ResponseEntity.ok().body("ok");
+    }
+
+    @RequestMapping(value="/updateStatus", method = RequestMethod.PUT)
+    public ResponseEntity<GoalsDTO> updateGoalStatus(@Valid @RequestBody GoalsDTO goalsDTO){
+        return ResponseEntity.ok().body(GoalsDTO.entityToDTO(goalsServices.changeStatus(goalsDTO.getId(),goalsDTO.getStatus())));
     }
 }

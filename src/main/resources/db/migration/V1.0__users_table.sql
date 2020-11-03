@@ -41,21 +41,21 @@ create table `goals`(
     `goal_discription` VARCHAR (255),
     `team_id` BIGINT,
     `grades` BIGINT,
---     `status` varchar (255),
+    `status` int,
     PRIMARY KEY (`goal_id`)
 );
 
 
 insert into `users` (`user_id`, `user_email`, `first_name`, `last_name`,`role_id`,`user_name`, `pass_word`, `team_id`) values (null,'admin@admin.com', 'sam', 'moe', '1', 'sahtout', 'khamla','1');
-insert into `users` (`user_id`, `user_email`, `first_name`, `last_name`,`role_id`,`user_name`, `pass_word`, `team_id`) values (null,'@admin.com', 'mas', 'emfdv', '2', 'saht', 'kha',null );
+insert into `users` (`user_id`, `user_email`, `first_name`, `last_name`,`role_id`,`user_name`, `pass_word`, `team_id`) values (null,'@admin.com', 'mas', 'emfdv', 3 , 'saht', 'kha',null );
 
 insert into `roles` (`role_id`, `role_name`, `role_code`) values (null, 'ADMIN', 'admin');
 insert into `roles` (`role_id`, `role_name`, `role_code`) values (null, 'FACULTY', 'faculty');
 insert into `roles` (`role_id`, `role_name`, `role_code`) values (null, 'STUDENT', 'student');
 
 insert into `teams` (`team_id`, `user_id`, `team_name`) values (null, null, 'apolo');
-insert into `goals` (`goal_id`, `goal_discription`, `team_id`, `grades`) values (null, 'hello world',1,100);
-insert into `goals` (`goal_id`, `goal_discription`, `team_id`, `grades`) values (null, 'hello world2',1,99);
+insert into `goals` (`goal_id`, `goal_discription`,`status`, `team_id`, `grades`) values (null,'close window', 1, null ,100);
+insert into `goals` (`goal_id`, `goal_discription`,`status`, `team_id`, `grades`) values (null,'open Window',1, null ,99);
 
 ALTER TABLE `Teams`
 ADD CONSTRAINT teams_fk foreign KEY (`user_id`) references users(`user_id`);

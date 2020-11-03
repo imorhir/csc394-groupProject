@@ -1,7 +1,13 @@
 package com.csc394.capStoneProject.services;
 
 import com.csc394.capStoneProject.controllers.GoalsController;
+import com.csc394.capStoneProject.dto.AssignGoalToTeam;
+import com.csc394.capStoneProject.dto.AssignStdToTeamDTO;
+import com.csc394.capStoneProject.dto.GoalsDTO;
 import com.csc394.capStoneProject.entities.Goals;
+import com.csc394.capStoneProject.entities.Status;
+import com.csc394.capStoneProject.entities.Teams;
+import com.csc394.capStoneProject.entities.User;
 import com.csc394.capStoneProject.repositories.GoalsRepository;
 import com.csc394.capStoneProject.repositories.TeamsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +36,23 @@ public class GoalsServices {
         updateGrade.getGrades();
         updateGrade.setGrades(grade);
         return goalsRepository.save(updateGrade);
+    }
+
+    public void  addGoalsToTeam(AssignGoalToTeam assignGoalToTeam){
+
+        assignGoalToTeam.getListGoalId().forEach(goals -> {
+            //Teams teams = teamsRepository.findById(goals).get();
+           Goals goal = goalsRepository.findById(goals).get();
+           goal.setTeams(teamsRepository.findById(assignGoalToTeam.getTeamId()).get());
+            goalsRepository.save(goal);
+        });
+    }
+
+    public Goals changeStatus(Long id, Status status){
+        Goals updateStatus = goalsRepository.findGoalById(id);
+        updateStatus.getStatus();
+        updateStatus.setStatus(status);
+        return goalsRepository.save(updateStatus);
     }
 
 

@@ -23,9 +23,12 @@ public class Goals implements Serializable {
     @Column(name="grades")
     private Integer grades;
 
+    @Column(name="status")
+    private Status status;
+
 //
     @ManyToOne()
-    @JoinColumn(name="team_id", referencedColumnName = "team_id",  insertable = false, updatable = false)
+    @JoinColumn(name="team_id", referencedColumnName = "team_id",  insertable = true, updatable = true)
     private Teams teams;
 
 

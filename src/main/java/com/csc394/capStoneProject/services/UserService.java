@@ -1,7 +1,9 @@
 package com.csc394.capStoneProject.services;
 
 import com.csc394.capStoneProject.dto.AssignStdToTeamDTO;
+import com.csc394.capStoneProject.dto.UserDTO;
 import com.csc394.capStoneProject.entities.Teams;
+import com.csc394.capStoneProject.entities.TypeOfUser;
 import com.csc394.capStoneProject.entities.User;
 import com.csc394.capStoneProject.repositories.TeamsRepository;
 import com.csc394.capStoneProject.repositories.UserRepository;
@@ -18,6 +20,7 @@ public class UserService {
     UserRepository userRepository;
     @Autowired
     TeamsRepository teamsRepository;
+
 
 
     public List<User> getUserStudentsByTeamId(Long teamId){
@@ -43,17 +46,25 @@ public class UserService {
     }
 
 
+
+
+
 //
 //    //
 //
 //    // TODO: delete unneeded
 //
 //    // get all users
-//    public List<User> getAllUsers() {
-//        List<User> users = new ArrayList<User>();
-//        userRepository.findAll().forEach(e -> users.add(e));
-//        return users;
-//    }
+    public List<User> getStudentUsers() {
+        List<User> users = new ArrayList<>();
+         userRepository.findAll().forEach(student->{
+             if (student.getRoleId() == 3) {
+                 users.add(student);
+             }
+         });
+
+        return users;
+    }
     // getAll Users
 //
 //    // get one user (by id)
