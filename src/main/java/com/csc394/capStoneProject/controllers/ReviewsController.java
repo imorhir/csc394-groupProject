@@ -1,18 +1,12 @@
 package com.csc394.capStoneProject.controllers;
 
 import com.csc394.capStoneProject.dto.ReviewsDTO;
-import com.csc394.capStoneProject.dto.UserDTO;
-import com.csc394.capStoneProject.entities.Teams;
-import com.csc394.capStoneProject.repositories.TeamsRepository;
 import com.csc394.capStoneProject.repositories.ReviewsRepository;
 import com.csc394.capStoneProject.services.ReviewsServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import com.csc394.capStoneProject.services.ReviewsServices;
-import com.csc394.capStoneProject.entities.Reviews;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -48,11 +42,11 @@ public class ReviewsController {
     }
 
     // add new review
-//    @RequestMapping(value="/addReview", method = RequestMethod.POST )
-//    public ResponseEntity<ReviewsDTO> addReview(
-//            @Valid @RequestBody ReviewsDTO reviewsDto) {
-//        return ResponseEntity.ok().body(ReviewsDTO.entityToDTO(reviewsService.saveReview(ReviewsDTO.dtoToEntity(reviewsDto))));
-//    }
+    @RequestMapping(value="/addReview", method = RequestMethod.POST )
+    public ResponseEntity<ReviewsDTO> addReview(
+            @Valid @RequestBody ReviewsDTO reviewsDto) {
+        return ResponseEntity.ok().body(ReviewsDTO.entityToDTO(reviewsService.saveReview(ReviewsDTO.dtoToEntity(reviewsDto))));
+    }
 
     // delete review
     @DeleteMapping("/delete/{id}")
