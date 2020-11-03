@@ -17,8 +17,8 @@ public class Reviews implements Serializable {
     private Long id;
 
 //    // team_id
-    @Column(name = "team_id")
-    private Integer teamId;
+//    @Column(name = "team_id")
+//    private Integer teamId;
 
     // user_id
     @Column(name = "user_id")
@@ -27,10 +27,10 @@ public class Reviews implements Serializable {
     // rating
     @Column(name = "rating")
     private Integer rating;
-//
-//    @ManyToOne()
-//    @JoinColumn(name="team_id", referencedColumnName = "team_id", insertable = false, updatable = false)
-//    private Teams teams;
+
+    @ManyToOne()
+    @JoinColumn(name="team_id", referencedColumnName = "team_id", insertable = true, updatable = true)
+    private Teams teams;
 
 //    @Column(name = "message")
 //    private String message;

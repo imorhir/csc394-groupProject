@@ -14,7 +14,7 @@ import java.util.List;
 public class ReviewsDTO {
 
     private Long id;
-    private Integer teamId;
+    private Long teamId;
     private Integer userId;
     private Integer rating;
     private Teams teams;
@@ -59,10 +59,10 @@ public class ReviewsDTO {
         ReviewsDTO reviewsDTO = new ReviewsDTO();
         if(reviewsEntity != null){
             reviewsDTO.setId(reviewsEntity.getId());
-            reviewsDTO.setTeamId(reviewsEntity.getTeamId());
+            reviewsDTO.setTeamId(reviewsEntity.getTeams().getId());
             reviewsDTO.setUserId(reviewsEntity.getUserId());
             reviewsDTO.setRating(reviewsEntity.getRating());
-//            reviewsDTO.setTeams(reviewsEntity.getTeams());
+ //           reviewsDTO.setTeams(reviewsEntity.getTeams().getId());
         }
 
         return reviewsDTO;
