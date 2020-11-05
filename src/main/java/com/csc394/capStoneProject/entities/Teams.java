@@ -20,7 +20,7 @@ public class Teams implements Serializable {
     private Long id;
     // user_id
     @Column(name="user_id")
-    private Integer userId;
+    private Long userId;
     // team_name
     @Column(name="team_name")
     private String teamName;

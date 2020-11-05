@@ -45,10 +45,5 @@ public class TeamsService {
 
 
 
-//    public List<Teams> getAllTeamsById() {
-//        List<User> users = new ArrayList<User>();
-//        userRepository.findAll().forEach(users::add);
-//        return users;
-//    }
 
 

@@ -27,6 +27,12 @@ public class GoalsDTO {
 
 
 
+
+
+
+
+
+
     public static GoalsDTO entityToDTO(Goals goalEntity){
 
         GoalsDTO goalsDTO = new GoalsDTO();
@@ -36,13 +42,21 @@ public class GoalsDTO {
             goalsDTO.setGrades(goalEntity.getGrades());
            goalsDTO.setTeamId(goalEntity.getTeams().getId());
            goalsDTO.setStatus(goalEntity.getStatus());
+
+
         }
 
         return goalsDTO;
     }
     public static List<GoalsDTO> listEntityToDTO(List<Goals> goalsEntity) {
+
         List<GoalsDTO> goalsDTO = new ArrayList<>();
-        goalsEntity.forEach(i -> goalsDTO.add(entityToDTO(i)));
+        goalsEntity.forEach(i -> {
+            goalsDTO.add(entityToDTO(i));
+
+
+        });
+
         return goalsDTO;
     }
 }

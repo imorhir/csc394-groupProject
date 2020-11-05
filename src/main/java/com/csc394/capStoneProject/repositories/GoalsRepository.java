@@ -14,4 +14,5 @@ public interface GoalsRepository extends JpaRepository <Goals, Long> {
 
   public List<Goals> findByTeams(Teams team);
   public Goals findGoalById(Long goalId);
+
 }

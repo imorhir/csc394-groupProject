@@ -56,6 +56,7 @@ insert into `roles` (`role_id`, `role_name`, `role_code`) values (null, 'STUDENT
 insert into `teams` (`team_id`, `user_id`, `team_name`) values (null, null, 'apolo');
 insert into `goals` (`goal_id`, `goal_discription`,`status`, `team_id`, `grades`) values (null,'close window', 1, null ,100);
 insert into `goals` (`goal_id`, `goal_discription`,`status`, `team_id`, `grades`) values (null,'open Window',1, null ,99);
+insert into `reviews`(`review_id`, `team_id`, `user_id`, `rating`) values (null, 1,1,5);
 
 ALTER TABLE `Teams`
 ADD CONSTRAINT teams_fk foreign KEY (`user_id`) references users(`user_id`);

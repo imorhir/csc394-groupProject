@@ -65,41 +65,6 @@ public class UserService {
 
         return users;
     }
-    // getAll Users
-//
-//    // get one user (by id)
-////  public User getUser(Long id) {
-////        return userRepository.findById(id).get();
-////    }
-//
-//    // get by email
-////    public User getUserEmail(String email) {
-////        return userRepository.findByEmail(email);
-////    }
-//
-////    // save user
-//    public User saveUser(User user) {
-//         user.getRole().toString().isEmpty();
-//        if(user.getUserType().toString().isEmpty())
-//            user.setUserType(TypeOfUser.USER);
-//        return userRepository.save(user);
-//    }
-//
-////    public User updateUser(Long userID, User user) {
-////        user.setId(userID);
-////
-////        user.setAddress(userRepository.findById(userID).get().getAddress());
-////
-////        return userRepository.save(user);
-////    }
-//
-//    // delete user
-////    public void deleteUser(User user) {
-////        userRepository.delete(user);
-////    }
-////
-////    public List<User> findUserByType(TypeOfUser typeOfUser) {
-////        return userRepository.findByUserType(typeOfUser);
-////    }
+   
 
 }

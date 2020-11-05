@@ -1,18 +1,14 @@
 package com.csc394.capStoneProject.services;
 
-import com.csc394.capStoneProject.controllers.GoalsController;
 import com.csc394.capStoneProject.dto.AssignGoalToTeam;
-import com.csc394.capStoneProject.dto.AssignStdToTeamDTO;
-import com.csc394.capStoneProject.dto.GoalsDTO;
 import com.csc394.capStoneProject.entities.Goals;
 import com.csc394.capStoneProject.entities.Status;
-import com.csc394.capStoneProject.entities.Teams;
-import com.csc394.capStoneProject.entities.User;
 import com.csc394.capStoneProject.repositories.GoalsRepository;
 import com.csc394.capStoneProject.repositories.TeamsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -25,6 +21,16 @@ public class GoalsServices {
     TeamsRepository teamsRepository;
 
 
+
+    public List<Goals> getAllGoals(){
+        List<Goals> goals = new ArrayList<>();
+        goalsRepository.findAll().forEach(goal -> {
+            goals.add(goal);
+
+        });
+        return goals;
+
+    }
 
 
     public List<Goals> findGoalByTeamId(Long teamId){

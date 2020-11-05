@@ -19,12 +19,15 @@ public class TeamsDTO {
     private Long id;
 
 
-    private Integer userId;
+    private Long userId;
 
 
     private String teamName;
 
     private Integer numberOfMenbers;
+
+    private Integer numberOfGoals;
+
 //
 
 
@@ -36,6 +39,7 @@ public class TeamsDTO {
             teamsDTO.setUserId(teamsEntity.getUserId());
             teamsDTO.setTeamName(teamsEntity.getTeamName());
             teamsDTO.setNumberOfMenbers(teamsEntity.getUser().size());
+            teamsDTO.setNumberOfGoals(teamsEntity.getGoals().size());
 
 
         }
