@@ -7,8 +7,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class RoleController {
 
-    @Autowired
-    RoleServices roleServices;
+
 
 
 }

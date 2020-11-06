@@ -1,8 +1,0 @@
--- create table `goals`(
---
---     `goal_id` BEGIN AUTO_INCREMENT,
---     `goal_discription` VARCHAR (255),
---     `team_id` INTEGER foreign key references teams(`team_id`),
---     `grades` INTEGER,
---     PRIMARY KEY (`goal_id`)
--- );

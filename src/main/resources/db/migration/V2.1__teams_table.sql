@@ -1,7 +1,0 @@
--- create table `teams`(
---
---     `team_id` BIGINT AUTO_INCREMENT,
---     `user_id` INTEGER  foreign key references users(`user_id`),
---     `team_name` varchar (255),
---     PRIMARY KEY (`team_id`)
--- );

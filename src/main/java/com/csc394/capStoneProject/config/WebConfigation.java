@@ -1,4 +1,4 @@
-package com.csc394.capStoneProject;
+package com.csc394.capStoneProject.config;
 
 
 
